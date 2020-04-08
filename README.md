@@ -1,7 +1,5 @@
-# Simulación del Reporte de Prevención de Lavado de Dinero para personas morales
-
-Simula el reporta de filtrado contra listas públicas de cumplimiento para Prevención de Lavado de Dinero y Financiamiento al Terrorismo (PLD/FT).
-
+# pld-morales-simulacion-client-java
+Es una solución de filtrado de personas morales contra listas públicas de cumplimiento para Prevención de Lavado de Dinero y Financiamiento al Terrorismo (PLD/FT).
 
 ## Requisitos
 
@@ -39,9 +37,7 @@ Al iniciar sesión seguir los siguientes pasos:
 
 ### Paso 2. Capturar los datos de la petición
 
-Los siguientes datos a modificar se encuentran en ***src/test/java/ApiTest.java***
-
-Es importante contar con el setUp() que se encargará de inicializar la url. Modificar la URL ***('the_url')***, como se muestra en el siguiente fragmento de código:
+Los siguientes datos a modificar se encuentran en ***src/test/java/io/PLDMoralesSimulacion/client/api***. Es importante contar con el setUp() que se encargará de inicializar la url. Modificar la URL ***('the_url')***, como se muestra en el siguiente fragmento de código:
 
 ```java
 @Before()
@@ -53,11 +49,7 @@ public void setUp() {
             .build();
 	apiClient.setHttpClient(okHttpClient);
 }
-```
 
-En el archivo **ApiTest**, que se encuentra en ***src/test/java/io/ApiTest/client/api*** se deberá modificar el siguiente fragmento de código con los datos correspondientes:
-
-```java
 @Test
 public void getPLDPmTest() throws ApiException {
 	
